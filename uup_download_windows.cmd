@@ -64,7 +64,7 @@ echo Extracting UUP converter...
 echo.
 
 echo Retrieving aria2 script...
-"%aria2%" --no-conf --log-level=info --log="aria2_download.log" -o"%aria2Script%" --allow-overwrite=true --auto-file-renaming=false "https://uupdump.net/get.php?id=def6bc61-fed9-4b9e-b9ef-52c78a252421&pack=zh-cn&edition=0&aria2=2"
+"%aria2%" --no-conf --log-level=info --log="aria2_download.log" -o"%aria2Script%" --allow-overwrite=true --auto-file-renaming=false "https://uupdump.net/get.php?id=9d506446-e622-438a-9c60-e811f83e36a5&pack=zh-cn&edition=0&aria2=2"
 if %ERRORLEVEL% GTR 0 call :DOWNLOAD_ERROR & exit /b 1
 echo.
 
@@ -79,7 +79,7 @@ if NOT [%DETECTED_ERROR%] == [] (
 
 echo Attempting to download files...
 "%aria2%" --no-conf --log-level=info --log="aria2_download.log" -x16 -s16 -j5 -c -R -d"%destDir%" -i"%aria2Script%"
-"%aria2%" --no-conf --log-level=info --log="aria2_download.log" -x16 -s16 -j5 -c -R -d"%destDir%" --allow-overwrite=true --auto-file-renaming=false "http://download.windowsupdate.com/d/msdownload/update/software/updt/2021/12/windows10.0-kb5009467-x64-ndp48_28770b5a14360312b6e3c34422d6f14e8a05de6f.cab"
+"%aria2%" --no-conf --log-level=info --log="aria2_download.log" -x16 -s16 -j5 -c -R -d"%destDir%" --allow-overwrite=true --auto-file-renaming=false "http://download.windowsupdate.com/d/msdownload/update/software/updt/2022/01/windows10.0-kb5010472-x64-ndp48_07d328da3e495d688287607c0c4748cb4a327b90.cab"
 if %ERRORLEVEL% GTR 0 call :DOWNLOAD_ERROR & exit /b 1
 
 if EXIST convert-UUP.cmd goto :START_CONVERT
